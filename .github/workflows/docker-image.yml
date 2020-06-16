@@ -18,4 +18,4 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: runzexia/bugshoot
         tags: debian
-        push: {{ github.ref == 'refs/heads/master' }}
+        push: ${{ github.ref == 'refs/heads/master' }}
