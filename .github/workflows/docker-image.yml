@@ -19,3 +19,11 @@ jobs:
         repository: runzexia/bugshoot
         tags: debian
         push: ${{ github.ref == 'refs/heads/master' }}
+        dockerfile: ./Dockerfile.debian
+    - uses: docker/build-push-action@v1
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        repository: runzexia/bugshoot
+        tags: alpine,latest
+        push: ${{ github.ref == 'refs/heads/master' }}
