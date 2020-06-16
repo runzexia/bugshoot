@@ -7,9 +7,10 @@ RUN apt-get update \
  && apt-get install -y curl \
  && apt-get install -y linux-perf linux-base \
  && apt-get install -y apache2-utils \
- && apt-get install -y bpfcc-tools \
  && apt-get install -y wget \
- && rm -rf /var/lib/apt/lists/*
+ && rm -rf /var/lib/apt/lists/* \
+ && wget https://raw.githubusercontent.com/brendangregg/perf-tools/master/execsnoop \
+        -O /usr/local/bin/execsnoop  && chmod +x /usr/local/bin/execsnoop
 
 WORKDIR "/home"
 
