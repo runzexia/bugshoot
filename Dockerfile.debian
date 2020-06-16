@@ -8,6 +8,7 @@ RUN apt-get update \
  && apt-get install -y linux-perf linux-base \
  && apt-get install -y apache2-utils \
  && apt-get install bpfcc-tools \
+ && apt-get install wget \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR "/home"
