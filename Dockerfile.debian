@@ -8,6 +8,9 @@ RUN apt-get update \
  && apt-get install -y linux-perf linux-base \
  && apt-get install -y apache2-utils \
  && apt-get install -y wget \
+ && apt-get install -y hping3 \
+ && apt-get install -y vim \
+ && apt-get install -y tcpdump \
  && rm -rf /var/lib/apt/lists/* \
  && wget https://raw.githubusercontent.com/brendangregg/perf-tools/master/execsnoop \
         -O /usr/local/bin/execsnoop  && chmod +x /usr/local/bin/execsnoop

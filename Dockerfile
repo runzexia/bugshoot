@@ -9,5 +9,8 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositor
  && apk add strace strace-doc \
  && apk add wget wget-doc \
  && apk add curl curl-doc \
+ && apk add hping3 hping3-doc \
+ && apk add vim vim-doc \
+ && apk add tcpdump tcpdump-doc \
  && apk add perf \
  && rm -vrf /var/cache/apk/*
