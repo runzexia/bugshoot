@@ -12,5 +12,10 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositor
  && apk add hping3 hping3-doc \
  && apk add vim vim-doc \
  && apk add tcpdump tcpdump-doc \
+ && apk add bcc-tools bcc-doc \
  && apk add perf \
- && rm -vrf /var/cache/apk/*
+ && rm -vrf /var/cache/apk/* \
+ # for bcc-tools
+ && ln -s $(which python3) /usr/bin/python
+
+ENV PATH="/usr/share/bcc/tools:${PATH}"
