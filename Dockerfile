@@ -15,6 +15,7 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositor
  && apk add bcc-tools bcc-doc \
  && apk add lsof lsof-doc \
  && apk add iotop iotop-doc \
+ && apk add fio fio-doc \
  && apk add perf \
  && rm -vrf /var/cache/apk/* \
  # for bcc-tools
