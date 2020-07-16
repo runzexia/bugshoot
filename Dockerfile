@@ -18,6 +18,7 @@ RUN echo http://dl-cdn.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositor
  && apk add fio fio-doc \
  && apk add net-tools net-tools-doc \
  && apk add iproute2 iproute2-doc \
+ && apk add ethtool ethtool-doc \
  && apk add perf \
  && rm -vrf /var/cache/apk/* \
  # for bcc-tools
