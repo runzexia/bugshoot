@@ -18,6 +18,7 @@ RUN apt-get update \
  && apt-get install -y net-tools \
  && apt-get install -y iperf3 \
  && apt-get install -y ethtool \
+ && apt-get install -y dnsutils \
  && rm -rf /var/lib/apt/lists/* \
  && wget https://raw.githubusercontent.com/brendangregg/perf-tools/master/execsnoop \
         -O /usr/local/bin/execsnoop  && chmod +x /usr/local/bin/execsnoop
